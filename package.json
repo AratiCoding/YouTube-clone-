@@ -2,7 +2,7 @@
   "name": "youtube-clone-",
   "version": "1.0.0",
   "description": " backend learning ",
-  "type":"module",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/index.js"
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/AratiCoding/YouTube-clone-/issues"
   },
-  "homepage": "https://github.com/AratiCoding/YouTube-clone-#readme"
+  "homepage": "https://github.com/AratiCoding/YouTube-clone-#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
 }
