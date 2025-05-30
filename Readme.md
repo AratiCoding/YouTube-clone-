@@ -9,3 +9,11 @@ nodemon is a dev dependancy means only used in development not production.
 ```javascript
 node i nodemon
 ```
+install following packages
+```javascript
+npm i mongoose express dotenv
+```
+
+## Important note :
+ - Whenever you are trying to communicate with database issues may occure so best practice is  use try catch or promises which resolve error with resolve reject
+-  Databse takes time hence it is recommended to use async await. 
