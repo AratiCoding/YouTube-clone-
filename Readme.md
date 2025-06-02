@@ -17,3 +17,6 @@ npm i mongoose express dotenv
 ## Important note :
  - Whenever you are trying to communicate with database issues may occure so best practice is  use try catch or promises which resolve error with resolve reject
 -  Databse takes time hence it is recommended to use async await. 
+
+### Method
+app.use() method is used for middlewares and config
