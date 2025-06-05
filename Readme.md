@@ -20,3 +20,14 @@ npm i mongoose express dotenv
 
 ### Method
 app.use() method is used for middlewares and config
+
+### mongoose library
+query pagination library
+```javascript
+npm i mongoose-aggregate-paginate-v2
+```
+library to help you hash passwords.
+```javascript
+npm i bcrypt
+npm install jsonwebtoken
+```
