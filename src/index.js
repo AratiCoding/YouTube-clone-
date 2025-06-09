@@ -1,44 +1,26 @@
-
-// require('dotenv').config({path:'./env'})
-import dotenv from 'dotenv'
-
+import express from 'express';
+import dotenv from 'dotenv';
 import connectDB from './db/index.js';
-// always use try catch when try to communicate with database
+import userRoutes from './routes/user.routes.js'; // ✅ add this line
 
 dotenv.config({
     path:'./.env'
 })
 
+const app = express();
+
+// ✅ Middleware to parse JSON
+app.use(express.json());
+
+// ✅ Register routes
+app.use("/api/v1/users", userRoutes); // Now /register will work
+
 connectDB()
-.then(()=>{
-    app.listen(process.env.PORT || 8000,()=>{
+.then(() => {
+    app.listen(process.env.PORT || 8000, () => {
         console.log(`Server is running at the port ${process.env.PORT}`);
-    })
+    });
 })
-.catch((err)=>{
-    console.log("MOngoDB connection failed !!",err)
-})
-
-
-// This is also a way to connect to database
-//********************/
-// import express from 'express'
-// const app=express();
-// ;( async ()=>{ 
-//     try {
-//        await mongoose.connect(`${process.env.MONGODB_URI}/${DB_NAME}`);
-
-//        app.on("error",(error)=>{
-//         console.log("Error",error);
-//         throw error;
-//        })
-
-//        app.listen(process.env.PORT,()=>{
-//         console.log(`App is listening on port ${process.env.PORT}`);
-//        })
-//     } catch (error) {
-//         console.log("Error :",error);
-//         throw err;
-        
-//     }
-// })()
+.catch((err) => {
+    console.log("MongoDB connection failed !!", err);
+});

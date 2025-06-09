@@ -31,3 +31,8 @@ library to help you hash passwords.
 npm i bcrypt
 npm install jsonwebtoken
 ```
+File upload functionality in backend
+```javascript
+npm i cloudinary
+npm i multer
+```
